@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Lorem Ipsum, Lipsum, Lorem, Ipsum, Text, Generate, Generator, Facts, Information, What, Why, Where, Dummy Text, Typesetting, Printing, de Finibus, Bonorum et Malorum, de Finibus Bonorum et Malorum, Extremes of Good and Evil, Cicero, Latin, Garbled, Scrambled, Lorem ipsum dolor sit amet, dolor, sit amet, consectetur, adipiscing, elit, sed, eiusmod, tempor, incididunt" />
+
+    <meta name="description" content="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator." />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <title>Lorem Ipsum - Lipsum generator</title>
+</head>
+<body> 
+    <style>
+    .cardt{
+        border-left: 3px solid #ef5350;
+    }
+    .contentG{
+        border: 2px solid  #ef5350;
+       
+    }
+    
+    </style>
+     <nav>
+      <div class="nav-wrapper black">
+        <a href="#" class="brand-logo center"> <strong>Lorem Ipsum</strong></a>
+
+      </div>
+    </nav>
+   <br>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12 center-align">
+                <h5>Copy and paste text quickly</h5>
+                <span class="">Copia y pega texto de manera rápida</span>
+            </div>
+        </div>
+    </div>
+   <div class="row">
+    <div class="col s12 m12 l4 offset-l2 ">
+        <div class="row"> 
+      <div class="card cardt">
+        <div class="card-image">
+          <a class="btn-floating halfway-fab waves-effect waves-light red" onclick="copyToClipboard('#p1')"><i class="material-icons">content_copy</i></a>
+        </div>
+        <div class="card-content">
+          <p id='p1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum bibendum neque, nec auctor leo aliquet at. Vestibulum aliquet dui sapien, et ullamcorper magna pharetra sit amet. </p>
+        </div>
+      </div></div>
+      <div class="row"> 
+        <div class="card cardt">
+            <div class="card-image">
+             <a class="btn-floating halfway-fab waves-effect waves-light red" onclick="copyToClipboard('#p2')"><i class="material-icons">content_copy</i></a>
+            </div>
+            <div class="card-content">
+          <p id='p2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum bibendum neque, nec auctor leo aliquet at. Vestibulum aliquet dui sapien, et ullamcorper magna pharetra sit amet. Phasellus felis sapien, mollis in erat id, commodo porttitor massa. Cras ullamcorper at nibh at faucibus. Nulla vulputate lacinia tellus eu feugiat. Fusce urna dolor, fermentum eu gravida non, molestie non ex. Donec in nisi at ex mollis porttitor.</p>
+             </div>
+       </div>
+    </div>
+    </div>
+    <div class="col s12 m12 l4 ">
+      <div class="card cardt ">
+        <div class="card-image">
+          <a class="btn-floating halfway-fab waves-effect waves-light red" onclick="copyToClipboard('#p3')"><i class="material-icons">content_copy</i></a>
+        </div>
+        <div class="card-content">
+          <p id='p3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis faucibus ipsum ut pulvinar. Aliquam eu congue elit, ut imperdiet lorem. Suspendisse potenti. Curabitur tempor porttitor facilisis. In hendrerit sem sed leo venenatis lobortis. Quisque faucibus diam nec orci tristique, vel euismod metus consequat. Nulla cursus efficitur mauris et fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vitae maximus purus. Ut tristique pellentesque arcu et dapibus. Curabitur vel urna vehicula, lacinia nisl euismod, consectetur turpis. Nam vulputate varius magna sit amet cursus.
+                Nulla porta nec libero vitae faucibus. Maecenas ex est, congue non ipsum porttitor, tincidunt hendrerit nibh. Morbi a dui nec risus fermentum egestas et in nunc. Donec sodales quis felis vel feugiat. Sed tellus odio, blandit a fermentum ac, viverra in leo.
+          </p>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="container">
+       <div class="row">
+
+           <div class="col s2">
+                <a class="waves-effect red btn" onclick="multiplicar()">Generar</a>
+           </div>
+       </div>
+
+       <div class="row">
+           <div class="col 6">
+               <div class="card contentG ">
+                    <div class="card-image">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" onclick="copyToClipboard('.p4')"><i class="material-icons">content_copy</i></a>
+                          </div>
+                   <div class="card-content">
+                       <p id="lorem" class="p4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit atque recusandae praesentium, quos provident quasi aperiam! Voluptatum cumque repudiandae optio ducimus fuga ex, eaque autem fugiat, debitis dolor, ut eos! </p>
+                    </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <script>
+    function multiplicar(){
+        var numValue=2;
+        let textl=document.getElementById('lorem').innerHTML
+        let array2=[null]
+        let text2
+        for (let i = 0; i <= numValue; i++) {
+            text2=textl+' '+textl;
+            array2.push(textl)  
+        }
+
+        document.getElementById('lorem').innerHTML=text2;
+    }
+    function copyToClipboard(elemento) {
+      var $temp = $("<input>")
+      $("body").append($temp);
+      $temp.val($(elemento).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+    }
+        </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+</body>
+</html>
